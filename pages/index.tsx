@@ -1,11 +1,11 @@
 import Nav from "../components/Nav";
-import GitCard from "../components/Card";
+import Search from "../components/Search";
 
 export default function Home() {
   return (
     <>
       <Nav />
-      <GitCard />
+      <Search />
     </>
   );
 }

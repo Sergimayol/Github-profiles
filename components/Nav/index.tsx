@@ -17,7 +17,9 @@ export default function Nav() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>Github Profiles Viewer</Box>
           <Box>
-            <NavLink link="/">Source code</NavLink>
+            <NavLink link="https://github.com/Sergimayol/github-profiles">
+              Source code
+            </NavLink>
           </Box>
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
