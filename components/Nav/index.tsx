@@ -6,7 +6,7 @@ import {
   Stack,
   useColorMode,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon, ViewIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon, InfoIcon } from "@chakra-ui/icons";
 import NavLink from "../NavLink";
 
 export default function Nav() {
@@ -16,7 +16,7 @@ export default function Nav() {
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
-            Github Profiles Viewer <ViewIcon />
+            Github Profiles Visualizer <InfoIcon />
           </Box>
           <Box>
             <NavLink
