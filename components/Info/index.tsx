@@ -52,6 +52,7 @@ const Info = ({ username }) => {
           following={user.following}
           html_url={user.html_url}
           public_repos={user.public_repos}
+          blog={user.blog}
         />
         {repos.map((e) => {
           return (

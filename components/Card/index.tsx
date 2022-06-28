@@ -10,10 +10,19 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { CardProps } from "../interfaces";
 import NavLink from "../NavLink";
 
 export default function GitCard(props: CardProps) {
+  const blog =
+    props.blog === "" ? (
+      ""
+    ) : (
+      <NavLink link={props.blog}>
+        Go to Website <ExternalLinkIcon />
+      </NavLink>
+    );
   return (
     <Center py={6}>
       <Box
@@ -50,6 +59,9 @@ export default function GitCard(props: CardProps) {
             <Text color={"gray.500"} align={"center"}>
               {props.bio}
             </Text>
+          </Stack>
+          <Stack spacing={0} marginTop={4} align={"center"}>
+            <Text fontWeight={600}>{blog}</Text>
           </Stack>
           <Stack direction={"row"} justify={"center"} spacing={6}>
             <Stack spacing={0} align={"center"}>

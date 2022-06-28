@@ -9,6 +9,7 @@ export interface CardProps {
   html_url?: string;
   public_repos?: number;
   login?: string;
+  blog?: string;
 }
 
 export interface RepoProps {
