@@ -3,12 +3,13 @@ import swal from "sweetalert";
 import GitCard from "../Card";
 import RepoCard from "../Repo";
 import { CardProps } from "../interfaces";
-import { Flex, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 
 const Info = ({ username }) => {
   const [user, setUser] = useState({});
   const [repos, setRepos] = useState([]);
   const [found, setFound] = useState(false);
+  const maxRepos = 30;
 
   async function getUser(username: any) {
     try {
@@ -31,7 +32,7 @@ const Info = ({ username }) => {
               return 0;
             }
           );
-          setRepos(response.slice(0, 30));
+          setRepos(response.slice(0, maxRepos));
         } catch (error) {
           swal("User not found");
           setFound(false);
