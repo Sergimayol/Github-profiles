@@ -18,16 +18,14 @@ export default function Nav() {
           <Box>
             Github Profiles Visualizer <InfoIcon />
           </Box>
-          <Box>
-            <NavLink
-              link="https://github.com/Sergimayol/github-profiles"
-              target={"_blank"}
-            >
-              Source code
-            </NavLink>
-          </Box>
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
+              <NavLink
+                link="https://github.com/Sergimayol/github-profiles"
+                target={"_blank"}
+              >
+                Source code
+              </NavLink>
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>

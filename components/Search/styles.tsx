@@ -5,10 +5,11 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
 `;
+
 export const Form = styled.form`
   margin-top: 30px;
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 50px;
 `;
 
