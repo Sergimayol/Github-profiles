@@ -3,6 +3,7 @@ import swal from "sweetalert";
 import GitCard from "../Card";
 import RepoCard from "../Repo";
 import { CardProps } from "../interfaces";
+import { Flex, SimpleGrid } from "@chakra-ui/react";
 
 const Info = ({ username }) => {
   const [user, setUser] = useState({});
@@ -30,7 +31,7 @@ const Info = ({ username }) => {
               return 0;
             }
           );
-          setRepos(response.slice(0, 4));
+          setRepos(response.slice(0, 30));
         } catch (error) {
           swal("User not found");
           setFound(false);
@@ -54,19 +55,21 @@ const Info = ({ username }) => {
           public_repos={user.public_repos}
           blog={user.blog}
         />
-        {repos.map((e) => {
-          return (
-            <RepoCard
-              key={e.id}
-              name={e.name}
-              html_url={e.html_url}
-              description={e.description}
-              homepage={e.homepage}
-              language={e.language}
-              stargazers_count={e.stargazers_count}
-            />
-          );
-        })}
+        <SimpleGrid minChildWidth={"300px"} spacing={"20px"} margin={4}>
+          {repos.map((e) => {
+            return (
+              <RepoCard
+                key={e.id}
+                name={e.name}
+                html_url={e.html_url}
+                description={e.description}
+                homepage={e.homepage}
+                language={e.language}
+                stargazers_count={e.stargazers_count}
+              />
+            );
+          })}
+        </SimpleGrid>
       </>
     );
   };
